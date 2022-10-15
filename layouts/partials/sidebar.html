@@ -29,22 +29,27 @@
         <p>{{ replace .Site.Params.description "\n" "<br />" | safeHTML }}</p>
       </div>
     </div>
-    <ul class="sidebar__list">
-      {{ range $item := .Site.Params.socialIcons }}
-        <li class="sidebar__list-item">
-          <a
-            href="{{ $item.url }}"
-            target="_blank"
-            rel="noopener"
-            aria-label="{{ $item.title }}"
-            title="{{ $item.title }}"
-          >
-            <i class="{{ $item.icon }} fa-2x" aria-hidden="true"></i>
-          </a>
-        </li>
+    {{ with $.Scratch.Get "social-list" }}
+      <ul class="sidebar__list">
+        {{ range . }}
+          {{ $social_value := site.Params.Get . }}
+          {{if ne $social_value "" }}
+          <li class="sidebar__list-item">
+            <a
+              href="https://{{ if eq . $mb }}micro.blog{{else}}{{ . }}.com{{end}}/{{ $social_value }}"
+              target="_blank"
+              rel="noopener"
+              aria-label="{{ . }}"
+              title="{{ . }}"
+            >
+              <i class="fab fa-{{ . }} fa-2x" aria-hidden="true"></i>
+            </a>
+          </li>
+          {{ end }}
 
-      {{ end }}
-    </ul>
+        {{ end }}
+      </ul>
+    {{end}}
   </div>
   {{- partial "footer.html" (dict "context" . "footerClassModifier" "sidebar") -}}
 </div>

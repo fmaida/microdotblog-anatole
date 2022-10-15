@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+{{ $.Scratch.Delete "social-list" }}<!---->
+{{ $social := slice "twitter" "github" "instagram" "microdotblog"}}<!---->
+{{ range $social }}<!---->
+{{ if isset site.Params . }}<!---->
+{{ $.Scratch.Add "social-list" (slice .) }}<!---->
+{{ end }}<!---->
+{{ end }}<!---->
+
 <html
   dir="{{ .Site.Language.LanguageDirection | default "ltr" }}"
   lang="{{- site.Language.Lang -}}"
@@ -48,5 +56,10 @@
 
 
     {{- end -}}
+    {{ partial "custom_footer.html" . }}
+
+    {{ range .Site.Params.plugins_js }}
+      <script src="{{ . }}"></script>
+    {{ end }}
   </body>
 </html>

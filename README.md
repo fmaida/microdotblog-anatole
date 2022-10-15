@@ -1,14 +1,9 @@
-# Anatole Hugo Theme ![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg) [![https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://www.conventionalcommits.org/) [![Netlify Status](https://api.netlify.com/api/v1/badges/1f4f2327-2b3f-428a-8f31-c4f921ebcc44/deploy-status)](https://app.netlify.com/sites/anatole-demo/deploys)
+# Anatole Hugo Theme. Ported to and customized for [Micro.blog](https://micro.blog).  ![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Anatole is a beautiful minimalist two-column [hugo](https://gohugo.io/) theme based on farbox-theme-Anatole.
+Anatole is a beautiful minimalist two-column [hugo](https://gohugo.io/) theme based on farbox-theme-Anatole. Ported to and customized for [Micro.blog](https://micro.blog). [Demo here](https://anatole-demo.netlify.app/).
 
 ![Screenshot Anatole Theme](https://raw.githubusercontent.com/lxndrblz/anatole/master/images/screenshot.png)
 ![Screenshot Anatole Theme (dark)](https://raw.githubusercontent.com/lxndrblz/anatole/master/images/screenshot_dark.png)
-
-## Demo
-
-A live demo of the theme can be found under the following domain:
-[https://anatole-demo.netlify.app/](https://anatole-demo.netlify.app/)
 
 ## Features
 
@@ -32,19 +27,21 @@ Anatole's aims to be minimalistic and sleek but still brings some great function
 - Post Series
 - Mermaid diagram support (optional)
 
-## Preview the Example Site
+## Installing the theme
 
-```shell
-git clone https://github.com/lxndrblz/anatole.git anatole
-cd anatole/exampleSite
-hugo server --themesDir ../..
-```
+Anatole would be [available in Micro.blog's Plug-ins directory](https://micro.blog/account/plugins/) and can directly be installed from there. Note that **the theme is compatible with Hugo 0.91** which is available as a setting on Micro.blog. You can follow the below general steps to install the theme. 
 
-## Documentation
+- Uninstall any theme that you have installed as a plugin. 
+- Set you current theme to blank and Hugo Version to 0.91 in the design section of your blog. 
+- Make sure there are no other conflicting custom CSS configured for the previous theme. 
+- Install the "[Anatole theme](https://micro.blog/account/plugins/view/43)" plug-in from the directory. 
+- Once the theme is successfully installed, you can configure the social icons displayed in the header by modifying the available options as plug-in's settings.
+- Additionally, you can also configure parameter to display full post content on homepage or not to display categories on archive page.
 
-🚧 The documentation has moved!
+### Change Log
 
-The latest documentation for the theme can be found within the [Wiki Tab on GitHub](https://github.com/lxndrblz/anatole/wiki).
+**Version 1.0:** Released TBD
+- First version with a separate Stats page
 
 ## License
 
@@ -55,18 +52,3 @@ Anatole is licensed under the [MIT license](https://github.com/lxndrblz/anatole/
 This theme is maintained by its author [Alexander Bilz](https://github.com/lxndrblz) and with the help from these awesome [contributors](https://github.com/lxndrblz/anatole/graphs/contributors). All contributions (including features, translations, code cleanups, improved documentation & bugs reporting) are welcome.
 
 Read the [guidelines](https://github.com/lxndrblz/anatole/blob/master/.github/CONTRIBUTING.md) for more information about contributing to this project.
-
-## Sponsoring
-
-If you like this theme, give it a star on GitHub, and consider supporting its development:
-
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/lxndrblz/)
-
-## Special Thanks 🎁
-
-- Go to [Cai Cai](https://github.com/hi-caicai), for the great Anatole [Farbox theme](https://github.com/hi-caicai/farbox-theme-Anatole) that formed the foundation for this theme.
-- Go to [Kareya Saleh](https://unsplash.com/photos/tLKOj6cNwe0) for providing the [profile picture](https://github.com/lxndrblz/anatole/blob/master/exampleSite/static/images/profile.jpg) used in the exampleSite.
-- Go to [Petri R](https://unsplash.com/photos/jLn20MzqfdE) for providing the [portfolio picture](https://github.com/lxndrblz/anatole/blob/master/exampleSite/static/images/portfolio/code.jpg) used in the exampleSite.
-- Go to [Ales Krivec](https://unsplash.com/photos/4miBe6zg5r0) for providing the thumbnail picture used in the exampleSite [image-test post](https://github.com/lxndrblz/anatole/blob/master/exampleSite/content/english/post/image-test.md).
-- Go to [Tobias Ahlin](https://github.com/tobiasahlin) for his [SpinKit](https://github.com/tobiasahlin/SpinKit) that is used in the exampleSite [redirect post](https://github.com/lxndrblz/anatole/blob/master/exampleSite/content/english/post/redirect.md).
-- Go to [FontAwseome](https://fontawesome.com/) for providing the icons used in this project.

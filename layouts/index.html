@@ -37,7 +37,7 @@
 
   {{ end }}
 
-  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") }}
   {{ range $paginator.Pages }}
     <div
       class="post {{ with .Site.Params.doNotLoadAnimations }}
@@ -57,7 +57,9 @@
 
       {{ end }}
       <div class="post__content">
-        <h3><a href="{{ .RelPermalink }}">{{ upper .Title }}</a></h3>
+        {{ if .Title }}
+          <h3><a href="{{ .RelPermalink }}">{{ upper .Title }}</a></h3>
+        {{ end }}
         {{ if .Site.Params.fullPostContent }}
           <p>{{ .Content | markdownify }}</p>
 
