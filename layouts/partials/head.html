@@ -1,25 +1,5 @@
 <head>
-  <title>
-    {{ if (eq .Site.Params.reversepagetitle true) }}
-      {{ with .Title }}
-        {{ . }} |
-
-      {{ end }}
-      {{- .Site.Params.author -}}
-
-
-    {{ else }}
-      {{- .Site.Params.author -}}{{ with .Title }}
-        |
-        {{ . }}
-
-
-      {{ end }}
-
-
-    {{ end }}
-
-  </title>
+  <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ site.Title }}</title>
 
   <!-- Meta -->
   <meta charset="utf-8" />

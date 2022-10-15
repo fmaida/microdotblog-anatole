@@ -1,8 +1,13 @@
 {
 	"version": "1.0.0",
 	"title": "Anatole theme",
-	"description": "a minimalistic two-column Hugo theme, customized for Micro.blog.",
+	"description": "A minimalistic two-column Hugo theme, customized for Micro.blog.",
 	"fields": [
+		{
+			"field": "params.description",
+			"label": "Description",
+			"placeholder": "Description/Subtitle for your blog"
+		},		
 		{
 			"field": "params.twitter",
 			"label": "Twitter",
@@ -19,14 +24,9 @@
 			"placeholder": "Your Instagram username"
 		},
 		{
-			"field": "params.microdotblog",
+			"field": "params.microblog",
 			"label": "Micro.blog",
 			"placeholder": "Your Micro.blog username"
-		},
-		{
-			"field": "params.buymeacoffee",
-			"label": "Buy Me a Coffee",
-			"placeholder": "Your Buy Me a Coffee username"
 		},
 		{
 			"field": "params.favicon",

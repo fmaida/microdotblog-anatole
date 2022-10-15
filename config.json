@@ -1,2 +1,15 @@
 {
+	"pygmentsUseClasses" : true,
+	"pygmentsCodeFences" : true,
+	"pygmentsCodefencesGuessSyntax" : true,
+	"markup": {
+		"goldmark": {
+			"renderer": {
+			  "unsafe": true
+			}
+		}
+	},
+	"params": {
+		"readMore" : true
+	}
 }

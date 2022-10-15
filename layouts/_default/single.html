@@ -52,6 +52,19 @@
             <em class="fas fa-stopwatch post__meta-icon"></em>
             <span class="post__meta-text">{{ i18n "reading_time" .ReadingTime }}</span>
           </li>
+          <!-- Post Reply Plugins -->
+          {{ if eq .Type "post"}}
+          {{ if or (templates.Exists "partials/reply-by-email.html") (templates.Exists "partials/conversation-link.html") }}
+            <li class="post_meta-item">
+              {{ if templates.Exists "partials/reply-by-email.html" }}
+                  {{ partial "reply-by-email.html" . }}
+              {{ end }}
+              {{ if templates.Exists "partials/conversation-link.html" }}
+                {{ partial "conversation-link.html" . }}
+              {{ end }}
+            </li>
+            {{ end }}
+          {{ end }}
         </ul>
 
       {{ end }}

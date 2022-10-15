@@ -11,38 +11,69 @@
     {{ range .Data.Pages.GroupByDate "2006" }}
       <div class="archive__heading">{{ .Key }}</div>
       {{ range .Pages }}
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            <a class="archive__list-title" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
-            <div class="archive__list-date">
-              {{ if isset .Site.Params "listdateformat" }}
-                {{ if .Site.Params.localizedDates }}
-                  {{ time.Format .Site.Params.listDateFormat .Date }}
-
-
-                {{ else }}
-                  {{ .Date.Format .Site.Params.listDateFormat }}
-
-
-                {{ end }}
-
+        <div class="archive__list">
+          <div class="archive__list-item">
+             <div class="post__content">
+              {{ if .Title }}
+                <h3><a href="{{ .RelPermalink }}">{{ upper .Title }}</a></h3>
+              {{ end }}
+              {{ if .Site.Params.fullPostContent }}
+                <p>{{ .Content | markdownify }}</p>
 
               {{ else }}
-                {{ if .Site.Params.localizedDates }}
-                  {{ time.Format "Jan 2" .Date }}
+                <p>{{ .Summary | markdownify }}</p>
+
+              {{ end }}
+              <!-- add read more -->
+              {{- if and (.Truncated) (.Site.Params.readMore) -}}
+                <a href="{{ .RelPermalink }}">{{ i18n "read_more" }}</a>
+
+              {{- end -}}
+              </div>
+              <!--  -->
+              <div class="post__footer">
+                <em class="fas fa-calendar-day"></em>
+                <a class="post__footer-date" href="{{ .RelPermalink }}">
+                  {{ if isset .Site.Params "indexdateformat" }}
+                    {{ if .Site.Params.localizedDates }}
+                      {{ time.Format .Site.Params.indexDateFormat .Date }}
 
 
-                {{ else }}
-                  {{ .Date.Format "Jan 2" }}
+                    {{ else }}
+                      {{ .Date.Format .Site.Params.indexDateFormat }}
+
+
+                    {{ end }}
+
+
+                  {{ else }}
+                    {{ if .Site.Params.localizedDates }}
+                      {{ time.Format "Mon, Jan 2, 2006" .Date }}
+
+
+                    {{ else }}
+                      {{ .Date.Format "Mon, Jan 2, 2006" }}
+
+
+                    {{ end }}
+
+
+                  {{ end }}
+                </a>
+                {{ with .Page.Params.Categories }}
+                  {{ partial "taxonomy/categories.html" . }}
 
 
                 {{ end }}
 
+                {{ with .Page.Params.Tags }}
+                  {{ partial "taxonomy/tags.html" . }}
 
-              {{ end }}
+
+                {{ end }}
+              </div>              
             </div>
-          </li>
-        </ul>
+          </div>
 
       {{ end }}
 

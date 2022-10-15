@@ -11,3 +11,20 @@
     background-color: $accent--lightmode;
   }
 }
+
+.archive-entry {
+  margin: 10px 0;
+}
+
+.archive-categories {
+  padding-bottom: 15px; 
+  margin-bottom: 30px;
+	display: inline;
+}
+
+.archive-category-name {
+  margin: 0 10px 0 0;
+	color: inherit;
+	font-weight: 700;
+	text-decoration: underline;
+}

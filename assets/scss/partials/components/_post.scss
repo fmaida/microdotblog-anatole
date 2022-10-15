@@ -89,7 +89,7 @@
       overflow-x: auto;
 
       @include themed() {
-        background-color: t('primary-lighter');
+        background-color: t('primary-lighter') !important;
       }
     }
 

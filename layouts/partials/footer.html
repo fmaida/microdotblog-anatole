@@ -6,7 +6,7 @@
         {{ replace .context.Site.Params.copyright "{{ YEAR }}" (now.Format "2006") | markdownify }}
 
       {{ else }}
-        {{ .context.Site.Params.author }}
+        {{ .context.Site.Author.name }}
         {{ now.Format "2006" }}
 
 
