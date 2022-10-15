@@ -29,7 +29,8 @@
         <p>{{ replace .Site.Params.description "\n" "<br />" | safeHTML }}</p>
       </div>
     </div>
-    {{ $mb := "microdotblog" }}<!---->
+    {{ $mb := "microblog" }}<!---->
+    {{ $lkd := "linkedin" }}<!---->
     {{ with $.Scratch.Get "social-list" }}
       <ul class="sidebar__list">
         {{ range . }}
@@ -37,7 +38,7 @@
           {{if ne $social_value "" }}
           <li class="sidebar__list-item">
             <a
-              href="https://{{ if eq . $mb }}micro.blog{{else}}{{ . }}.com{{end}}/{{ $social_value }}"
+            href="https://{{ if eq . $mb }}micro.blog{{else}}{{ . }}.com{{ if eq . $lkd }}/in{{end}}{{end}}/{{ $social_value }}"
               target="_blank"
               rel="noopener"
               aria-label="{{ . }}"

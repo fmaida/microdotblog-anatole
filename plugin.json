@@ -29,6 +29,11 @@
 			"placeholder": "Your Micro.blog username"
 		},
 		{
+			"field": "params.linkedin",
+			"label": "LinkedIn",
+			"placeholder": "Your LinkedIn username"
+		},
+		{
 			"field": "params.favicon",
 			"label": "Favicon Path",
 			"placeholder": "Path to the favicon to be used"
