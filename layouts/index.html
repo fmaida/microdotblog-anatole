@@ -68,7 +68,7 @@
 
         {{ end }}
         <!-- add read more -->
-        {{- if and (.Truncated) (.Site.Params.readMore) -}}
+        {{- if and (not (.Site.Params.fullPostContent)) (.Site.Params.readMore) -}}
           <a href="{{ .RelPermalink }}">{{ i18n "read_more" }}</a>
 
         {{- end -}}

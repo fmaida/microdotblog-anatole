@@ -13,13 +13,12 @@
 }
 
 .archive-entry {
-  margin: 10px 0;
+  margin: 10px 15px;
 }
 
 .archive-categories {
-  padding-bottom: 15px; 
-  margin-bottom: 30px;
-	display: inline;
+  padding: 15px;
+  margin: 30px 0;
 }
 
 .archive-category-name {
@@ -27,4 +26,55 @@
 	color: inherit;
 	font-weight: 700;
 	text-decoration: underline;
+}
+
+/* Webmentions Customizations
+ -------------------------------------------------- */
+ .microblog_conversation {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid var(--air);
+}
+
+.microblog_post {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.microblog_user {
+  margin-bottom: 10px;
+}
+
+.microblog_avatar {
+  border-radius: 5px;
+  vertical-align: middle;
+  float: left;
+  display: inline;
+  margin: 0 10px 0 0;
+  width: 30px;
+  height: 30px;
+  max-width: 30px !important;
+}
+
+.microblog_time {
+  font-size: 1.6rem;
+  color: var(--air);
+}
+
+.microblog_time a {
+  color: var(--air);
+  text-decoration: none;
+}
+
+.microblog_text a {
+  padding-bottom: 0.2rem;
+  font-weight: 500;
+}
+
+.microblog_text p {
+  margin-bottom: 5px;
+}
+
+a.reply-by-email, a.conversation-on-mb {
+  margin: 15px 15px 0 0;
 }
