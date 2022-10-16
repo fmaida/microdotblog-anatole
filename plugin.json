@@ -1,5 +1,5 @@
 {
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"title": "Anatole theme",
 	"description": "A minimalistic two-column Hugo theme, customized for Micro.blog.",
 	"fields": [
@@ -32,6 +32,11 @@
 			"field": "params.linkedin",
 			"label": "LinkedIn",
 			"placeholder": "Your LinkedIn username"
+		},
+		{
+			"field": "params.mastodon",
+			"label": "Mastodon",
+			"placeholder": "Your Mastodon profile url (including instance)"
 		},
 		{
 			"field": "params.favicon",

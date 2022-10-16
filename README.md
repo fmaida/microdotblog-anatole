@@ -40,7 +40,12 @@ Anatole is [available in Micro.blog's Plug-ins directory](https://micro.blog/acc
 
 ### Change Log
 
-**Version 1.0:** Released 16th October, 2022
+**Version 1.0.1:** Released 16th October, 2022
+- Fix for minor issues on archive page with categories
+- Fix for image display on smaller screens
+- Support for mastodon in social links list
+
+**Version 1.0:** Released 15th October, 2022
 - First version with a separate Stats page
 
 ## License

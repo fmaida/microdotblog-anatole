@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {{ $.Scratch.Delete "social-list" }}<!---->
-{{ $social := slice "twitter" "github" "instagram" "linkedin" "microblog"}}<!---->
+{{ $social := slice "twitter" "github" "instagram" "linkedin" "mastodon" "microblog"}}<!---->
 {{ range $social }}<!---->
 {{ if isset site.Params . }}<!---->
 {{ $.Scratch.Add "social-list" (slice .) }}<!---->
