@@ -39,13 +39,13 @@
           {{if ne $social_value "" }}
           <li class="sidebar__list-item">
             <a
+              rel="me"
               {{if eq . $mstdn }}
                 href="{{ $social_value }}"
               {{ else }}
                 href="https://{{ if eq . $mb }}micro.blog{{else}}{{ . }}.com{{ if eq . $lkd }}/in{{end}}{{end}}/{{ $social_value }}"
               {{ end }}
               target="_blank"
-              rel="noopener"
               aria-label="{{ . }}"
               title="{{ . }}"
             >

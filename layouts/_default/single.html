@@ -6,7 +6,7 @@
     {{ else }}
       animated fadeInDown
 
-    {{ end }}"
+    {{ end }} h-entry "
   >
     {{ if .Params.thumbnail }}
       <div class="post__thumbnail-wrapper">
@@ -15,12 +15,12 @@
 
     {{ end }}
     <div class="post__content">
-      <h1>{{ title .Title }}</h1>
+      <h1 class="p-name">{{ title .Title }}</h1>
       {{ if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) }}
         <ul class="post__meta">
           <li class="post__meta-item">
             <em class="fas fa-calendar-day post__meta-icon"></em>
-            <span class="post__meta-text"
+            <span class="post__meta-text dt-published"
               >{{ if isset .Site.Params "singledateformat" }}
                 {{ if .Site.Params.localizedDates }}
                   {{ time.Format .Site.Params.singleDateFormat .Date }}
@@ -47,6 +47,7 @@
 
               {{ end }}
             </span>
+            <a class="u-url" href="{{ .RelPermalink }}" style="display:none;"/>
           </li>
           <li class="post__meta-item">
             <em class="fas fa-stopwatch post__meta-icon"></em>
@@ -64,8 +65,9 @@
 
 
       {{- end -}}
-
-      {{ .Content }}
+      <span class="e-content">
+        {{ .Content }}
+      </span>
 
       {{- if isset .Params "series" -}}
         {{- partial "series.html" . -}}
