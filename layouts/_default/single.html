@@ -20,33 +20,7 @@
         <ul class="post__meta">
           <li class="post__meta-item">
             <em class="fas fa-calendar-day post__meta-icon"></em>
-            <span class="post__meta-text dt-published"
-              >{{ if isset .Site.Params "singledateformat" }}
-                {{ if .Site.Params.localizedDates }}
-                  {{ time.Format .Site.Params.singleDateFormat .Date }}
-
-
-                {{ else }}
-                  {{ .Date.Format .Site.Params.singleDateFormat }}
-
-
-                {{ end }}
-
-
-              {{ else }}
-                {{ if .Site.Params.localizedDates }}
-                  {{ time.Format "Mon, Jan 2, 2006" .Date }}
-
-
-                {{ else }}
-                  {{ .Date.Format "Mon, Jan 2, 2006" }}
-
-
-                {{ end }}
-
-
-              {{ end }}
-            </span>
+            <span class="post__meta-text dt-published">{{ time.Format "Mon, Jan 2, 2006" .Date }}</span>
             <a class="u-url" href="{{ .RelPermalink }}" style="display:none;"/>
           </li>
           <li class="post__meta-item">
