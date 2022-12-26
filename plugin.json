@@ -39,6 +39,11 @@
 			"placeholder": "Your Mastodon profile url (including instance)"
 		},
 		{
+			"field": "params.kofi",
+			"label": "Ko-Fi",
+			"placeholder": "Your Ko-Fi profile url"
+		},
+		{
 			"field": "params.favicon",
 			"label": "Favicon Path",
 			"placeholder": "Path to the favicon to be used"
