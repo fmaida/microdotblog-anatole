@@ -1,4 +1,5 @@
 {
+	"defaultContentLanguage": "it",
 	"pygmentsUseClasses" : true,
 	"pygmentsCodeFences" : true,
 	"pygmentsCodefencesGuessSyntax" : true,
